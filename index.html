@@ -2,37 +2,60 @@
 <html>
 	<head>
 		<title>Train Scheduler</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	</head>
 	<body>
 		<div class="container">
-			<div class="jumbotron bg-secondary text-white">
+			<div class="jumbotron">
 				<div class="container">
 					<h1 class="display-3 text-center">Train Schedule</h1>
 				</div>
 			</div>
-			<div class="card">
-				<div class="card-header bg-info text-white">
-					<h5>Current Train Schedule</h5>
-				</div>
-				<div class="card-body">
-					
+			<div class="panel panel-primary">
+				<div class="panel-heading"><h3 class="panel-title">Current Train Schedule</h3></div>
+				
+				<div class="panel-body">
 					<div class="row">
-						<div class="col">Train Name</div>
-						<div class="col">Destination</div>
-						<div class="col">Frequency (min)</div>
-						<div class="col">Next Arrival</div>
-						<div class="col">Minutes Away</div>
+						<div class="col-md-2"><h5>Train Name</h5>
+							<section>
+								<h6 id="name-display"></h6>
+							</section>
+						</div>
+						<div class="col-md-2"><h5>Destination</h5>
+							<section>
+								<h6 id="destination-display"></h6>
+							</section>
+						</div>
+						<div class="col-md-2"><h5>First Train</h5>
+							<section>
+								<h6 id="firstTrain-display"></h6>
+							</section>
+						</div>
+						<div class="col-md-2"><h5>Frequency (min)</h5>
+							<section>
+								<h6 id="frequency-display"></h6>
+							</section>
+						</div>
+						<div class="col-md-2"><h5>Next Arrival</h5>
+							<section>
+								<h6 id="arrival-display"></h6>
+							</section>
+						</div>
+						<div class="col-md-2"><h5>Minutes Away</h5>
+							<section>
+								<h6 id="away-display"></h6>
+							</section>
+						</div>
+						<hr>
 					</div>
 				</div>
 			</div>
-			<div class="card" id="marginFix">
-				<div class="card-header bg-info text-white">
-					<h5>Add Train</h5>
-				</div>
-				<div class="card-body">
+			
+			<div class="panel panel-primary">
+				<div class="panel-heading"><h3 class="panel-title">Current Train Schedule</h3></div>
+				<div class="panel-body">
 					<form>
 						<div class="form-group">
 							<label for="text">Train Name</label>
@@ -44,17 +67,24 @@
 						</div>
 						<div class="form-group">
 							<label for="text">First Train Time (HH:mm - military time)</label>
-							<input type="text" class="form-control" id="time-input">
+							<input type="text" class="form-control" id="firstTrain-input">
 						</div>
 						<div class="form-group">
 							<label for="text">Frequency (min)</label>
 							<input type="text" class="form-control" id="frequency-input">
 						</div>
-						<button type="submit" class="btn btn-info">Submit</button>
+						<button type="submit" class="btn btn-primary" id="addTrain">Submit</button>
 					</form>
 				</div>
 			</div>
+			
 		</div>
-		<script type="text/javascript" src="assets/script/app.js"></script>
-	</body>
+	</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/script/app.js"></script>
+</body>
 </html>
