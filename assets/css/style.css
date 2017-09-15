@@ -1,9 +1,9 @@
 
-
-
-
-
 #marginFix {
 	margin-top: 25px;
 	margin-bottom: 25px;
+}
+
+.mydiv {
+	opacity: .90;
 }
